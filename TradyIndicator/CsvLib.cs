@@ -37,12 +37,12 @@ namespace TradyIndicator
 
             }
         }
-        public List<string> getListString(double[] colsData)
+        public List<string> getListString(string[] colsData)
 
         {
 
             List<string> strings = new List<string>();
-            foreach (double d in colsData)
+            foreach (string d in colsData)
             {
 
                 strings.Add(d.ToString());
@@ -55,7 +55,7 @@ namespace TradyIndicator
 
 
 
-        public void addToCsvColData(string filePath, double[] colsData, string colName)
+        public void addToCsvColData(string filePath, string[] colsData, string colName)
         {
 
 
@@ -106,7 +106,7 @@ namespace TradyIndicator
                     else
                     {
 
-                        if (i <= dataL.Count)
+                        if (i < dataL.Count)
                             newList.Add(dataL[i] + "," + colsData[i - 1].ToString().Replace(",", "."));
                         else
                             newList.Add("" + "," + colsData[i - 1].ToString().Replace(",", "."));
